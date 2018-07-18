@@ -28,8 +28,9 @@ VALUES ('Física'), ('Jurídica');
 INSERT INTO tbl_pessoas (nome, email, telefone, tipo_id)
 VALUES	
 -- ACCEPTED VALUES
-		('João', 'email1@email.com', '(85)9090.8080', 1),
-		('Maria', 'email2@email.com', '(85)101.101.101', 1);
+		('Francisco', '(85)123.456.789', 'francisco@gmail.com', 1),
+		('João', '(85)1234.5678', 'joao@gmail.com', 1),
+		('Pizzaria do João', '(85)123.456.789', 'contato@pizzariadojoao.com', 2);
 -- REFUSED VALUES
 --		('Kleber', 'email3@email.com', '(800)8080.10000', 2),
 --		('Jhonatan', 'not-an_email.com', '(85)8080.8080', 1),
