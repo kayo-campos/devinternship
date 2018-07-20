@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS tbl_tipos_pessoas (
 CREATE TABLE IF NOT EXISTS tbl_pessoas (
 	id SERIAL PRIMARY KEY,
 	nome VARCHAR(30) NOT NULL,
-	email VARCHAR(30) NOT NULL,
-	telefone VARCHAR(15),
+	email VARCHAR(30) NOT NULL UNIQUE,
+	telefone VARCHAR(15) UNIQUE,
 	tipo_id INT references tbl_tipos_pessoas(id),
 	CONSTRAINT validate_telefone CHECK (	
 		telefone SIMILAR TO '\(([0-9]{2})\)([0-9]{4})\.([0-9]{4})'
