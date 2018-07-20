@@ -18,16 +18,10 @@ module.exports = {
     async post (req, res) {
         try {
             const personToInsert = req.body;
-            console.log(personToInsert);
             const options = {
-                replacements: [
-                    personToInsert.nome,
-                    personToInsert.telefone,
-                    personToInsert.email,
-                    personToInsert.tipo_id
-                ],
                 type: Sequelize.QueryTypes.INSERT
             }
+            
             await sequelize.query(
                 `INSERT INTO tbl_pessoas (nome, telefone, email, tipo_id)
                 VALUES ('${personToInsert.nome}', '${personToInsert.telefone}', '${personToInsert.email}', ${personToInsert.tipo_id});
